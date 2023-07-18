@@ -28,7 +28,7 @@ There you have it, neat and clear like a freshly organized sock drawer. Enjoy th
 ## Website
 ![Password Generator](./Assets/03-javascript-homework-demo.png)
 
-[Deployed Password Generator](]
+[Deployed Password Generator](https://jtecson85.github.io/PW-Generator/)
 
 ## Task List
  Create a form for character length and type selection instead of using prompt and confirm.
