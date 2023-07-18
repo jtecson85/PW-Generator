@@ -26,7 +26,7 @@ Once you've customized your password to your heart's content, there's a nifty "C
 There you have it, neat and clear like a freshly organized sock drawer. Enjoy the password-generating goodness!
 
 ## Website
-![Password Generator](./Assets/03-javascript-homework-demo.png
+![Password Generator](./Assets/03-javascript-homework-demo.png)
 
 [Deployed Password Generator](]
 
