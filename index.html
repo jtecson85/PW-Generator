@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+      const numberChars = "0123456789";
+      const specialChars = "!@#$%^&*";
+
+      const generatePassword = () => {
+        const passwordLength = 12; // You can change the default length here
+        const includeUppercase = true;
+        const includeLowercase = true;
+        const includeNumbers = true;
+        const includeSpecial = true;
+
+        let characters = "";
+
+        if (includeUppercase) characters += uppercaseChars;
+        if (includeLowercase) characters += lowercaseChars;
+        if (includeNumbers) characters += numberChars;
+        if (includeSpecial) characters += specialChars;
+
+        if (characters === "") {
+          alert("Please select at least one character type.");
+          return;
+        }
+
+        let password = "";
+        for (let i = 0; i < passwordLength; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          password += characters.charAt(randomIndex);
+        }
+
+        document.getElementById("password").textContent = password;
+      };
+
+      document.getElementById("generate").addEventListener("click", generatePassword);
+    </script>
+  </body>
+</html>
